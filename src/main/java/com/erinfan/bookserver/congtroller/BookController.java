@@ -14,7 +14,7 @@ public class BookController extends AbstractController {
     @Override
     protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response) throws Exception {
         ModelAndView view = new ModelAndView("index");
-        view.addObject("msg", "hello spring");
+        view.addObject("msg", "fuck spring");
         return view;
     }
 }
