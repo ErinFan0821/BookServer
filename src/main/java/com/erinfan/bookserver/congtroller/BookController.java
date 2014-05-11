@@ -23,13 +23,7 @@ public class BookController{
     @RequestMapping(method = RequestMethod.GET)
     public String viewBookInfo(ModelMap model) {
         List<Book> books = bookBo.getAllBooks();
-        for (Book book : books) {
-            model.addAttribute("name", book.getName());
-            model.addAttribute("isbn", book.getIsbn());
-            model.addAttribute("author", book.getAuthor());
-            model.addAttribute("price", book.getPrice());
-        }
-        model.addAttribute("msg", "fuck spring");
+        model.addAttribute("books", books);
         return "index";
     }
 

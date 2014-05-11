@@ -35,7 +35,6 @@ public class Book implements Serializable {
         this.price = price;
     }
 
-
     public String getAuthor() {
         return author;
     }
