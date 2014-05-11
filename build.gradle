@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'jetty'
 
 task initProject << {
     sourceSets.all { sourceSet ->
@@ -16,5 +17,6 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile 'org.springframework:spring:2.5.6'
-    compile 'org.springframework:spring-webmvc:3.0.0.RELEASE'
+    compile 'org.springframework:spring-webmvc:2.5.6'
+    compile 'javax.servlet:servlet-api:2.5'
 }
