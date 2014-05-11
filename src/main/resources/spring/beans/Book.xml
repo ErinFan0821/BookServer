@@ -3,7 +3,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-    <bean id="BookBo" class="com.erinfan.bookserver.bo.impl.BookBoImpl">
+    <import resource="classpath:spring/database/Hibernate.xml"/>
+    <bean id="bookBo" class="com.erinfan.bookserver.bo.impl.BookBoImpl">
         <property name="bookDao" ref="bookDao"/>
     </bean>
     <bean id="bookDao" class="com.erinfan.bookserver.dao.impl.BookDaoImpl">
