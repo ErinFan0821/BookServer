@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.erinfan.bookserver.model.Book" table="book">
+        <id name = "isbn" type="int">
+            <column name="ISBN"/>
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="100" not-null="true"/>
+        </property>
+        <property name="price" type="double">
+            <column name="PRICE" not-null="true"/>
+        </property>
+        <property name="author" type="string">
+            <column name="AUTHOR" length="32" not-null="true"/>
+        </property>
+    </class>
+
+</hibernate-mapping>
