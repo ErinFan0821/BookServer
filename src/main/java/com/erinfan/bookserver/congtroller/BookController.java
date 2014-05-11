@@ -1,20 +1,19 @@
 package com.erinfan.bookserver.congtroller;
 
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.AbstractController;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Created by techops on 5/11/14.
  */
-
-public class BookController extends AbstractController {
-    @Override
-    protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        ModelAndView view = new ModelAndView("index");
-        view.addObject("msg", "fuck spring");
-        return view;
+@Controller
+@RequestMapping("/welcome")
+public class BookController{
+    @RequestMapping(method = RequestMethod.GET)
+    public String fuckSpring(ModelMap model) {
+        model.addAttribute("msg", "fuck spring");
+        return "index";
     }
 }
